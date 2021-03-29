@@ -22,7 +22,7 @@ public class DbConnection {
 				Statement stmt = c.createStatement();
 				ResultSet rs = stmt.executeQuery(sql)){
 			while(rs.next()) {
-				System.out.println(rs.getString("player_name"));
+				System.out.println(rs.getString("player_name") + " " + rs.getDouble("ppg") + "ppg "+ rs.getDouble("apg") + "apg "+ rs.getDouble("rpg") + "rpg");
 			}
 		}catch (SQLException e) {
 			System.out.println(e.getMessage());
